@@ -1,6 +1,8 @@
-package color
+package gocolor
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestColor(t *testing.T) {
 	Green("绿色")
