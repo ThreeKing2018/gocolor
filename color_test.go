@@ -3,10 +3,6 @@ package gocolor
 import (
 	"testing"
 )
-
-var colorMap = map[int]string{
-	1:"green",
-}
 func colorFunc(color, s string) string {
 	result := ""
 	switch color {
@@ -49,7 +45,7 @@ func TestColor(t *testing.T) {
 		}
 	}
 }
-3
+
 func TestBackgroundColor(t *testing.T) {
 	GreenBG("绿色背景")
 	WhiteBG("白色背景")
