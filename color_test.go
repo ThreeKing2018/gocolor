@@ -49,7 +49,7 @@ func TestColor(t *testing.T) {
 		}
 	}
 }
-
+3
 func TestBackgroundColor(t *testing.T) {
 	GreenBG("绿色背景")
 	WhiteBG("白色背景")

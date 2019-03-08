@@ -48,4 +48,4 @@ gocolor.MagentaBG(SRed("红字洋底色"))
 gocolor.GreenBG(SMagentaBG("洋红字绿底"))
 ```
 
-![](picture/1.jpg)
+![](picture/3.jpg)
