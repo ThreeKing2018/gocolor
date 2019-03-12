@@ -2,6 +2,8 @@ package gocolor
 
 import (
 	"testing"
+	"github.com/davecgh/go-spew/spew"
+	"fmt"
 )
 func colorFunc(color, s string) string {
 	result := ""
@@ -30,13 +32,13 @@ func TestColor(t *testing.T) {
 		color string
 		expected string
 	}{
-		{"g", "green", "\x1b[32mg\n\x1b[0m"},
-		{"w", "white", "\x1b[37mw\n\x1b[0m"},
-		{"y", "yellow","\x1b[33my\n\x1b[0m"},
-		{"r", "red",   "\x1b[31mr\n\x1b[0m"},
-		{"b", "blue",  "\x1b[34mb\n\x1b[0m"},
-		{"m", "magenta","\x1b[35mm\n\x1b[0m"},
-		{"c", "cyan",  "\x1b[36mc\n\x1b[0m"},
+		{"g", "green", "\x1b[32mg\x1b[0m"},
+		{"w", "white", "\x1b[37mw\x1b[0m"},
+		{"y", "yellow","\x1b[33my\x1b[0m"},
+		{"r", "red",   "\x1b[31mr\x1b[0m"},
+		{"b", "blue",  "\x1b[34mb\x1b[0m"},
+		{"m", "magenta","\x1b[35mm\x1b[0m"},
+		{"c", "cyan",  "\x1b[36mc\x1b[0m"},
 	}
 	for _, row := range tests {
 		actual := colorFunc(row.color, row.s)
@@ -61,4 +63,11 @@ func TestGroupColor(t *testing.T) {
 	CyanBG(SYellow("黄字蓝绿底色"))
 	MagentaBG(SRed("红字洋底色"))
 	GreenBG(SMagentaBG("洋红字绿底"))
+}
+
+func TestGreen(t *testing.T) {
+	s := SGreen("绿色")
+	spew.Dump(s)
+	fmt.Println(s)
+	fmt.Printf("\x1b[0;%dmhello world 32: 绿 \n\x1b[0m", 32)
 }

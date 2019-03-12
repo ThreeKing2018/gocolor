@@ -2,7 +2,6 @@ package gocolor
 
 import (
 	"fmt"
-	"strings"
 )
 
 //定义不同颜色值
@@ -25,9 +24,6 @@ var (
 )
 
 func colorPrint(format string, color string, s ...interface{}) string {
-	if !strings.HasSuffix(format, "\n") {
-		format += "\n"
-	}
 	if len(s) == 0 {
 		return fmt.Sprint(color + format + reset)
 	}
