@@ -1,6 +1,8 @@
 # golang 命令行输出带颜色的字符串
 > 让你的命令行丰富多彩,输出不同颜色,自由组合
 
+# 文档
+- https://godoc.org/github.com/ThreeKing2018/gocolor
 
 # 安装
 ```
